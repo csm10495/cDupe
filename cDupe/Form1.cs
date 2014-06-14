@@ -279,6 +279,12 @@ namespace cDupe
             //boolean flip
             ToolStripResizeToScale.Checked = !ToolStripResizeToScale.Checked;
 
+            //apply setting now
+            if (ToolStripResizeToScale.Checked)
+            {
+                scaleToDuplicationZoneRatio();
+            }
+
             //write state to settings
             Properties.Settings.Default.resize_to_ratio = ToolStripResizeToScale.Checked;
             Properties.Settings.Default.Save();
