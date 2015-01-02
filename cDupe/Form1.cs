@@ -246,13 +246,6 @@ namespace cDupe
         }
 
 
-        //does nothing with the object
-        //use to remove warnings about not using variables
-        private void do_nothing_with(object o)
-        {
-            //does nothing
-        }
-
         /// <summary>
         /// called when user changes refresh rate
         /// must change value in settings
