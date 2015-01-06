@@ -106,6 +106,13 @@ namespace cDupe
                 this.BackgroundImage = null;
             }
 
+            //special handling for mouse follow
+            if (ToolStripFollowMouse.Checked)
+            {
+                x_loc = MousePosition.X - (x_size / 2);
+                y_loc = MousePosition.Y - (y_size / 2);
+            }
+
             //hopefully unnecessary try-catch
             try
             {
@@ -302,6 +309,14 @@ namespace cDupe
         {
             //boolean flip
             ToolStripFollowMouse.Checked = !ToolStripFollowMouse.Checked;
+
+            //fix x,y_loc after modification by follow mode
+            if (!ToolStripFollowMouse.Checked)
+            {
+                x_loc = Properties.Settings.Default.x_loc;
+                y_loc = Properties.Settings.Default.y_loc;
+            }
+
 
             //write state to settings
             Properties.Settings.Default.follow_mouse = ToolStripFollowMouse.Checked;
