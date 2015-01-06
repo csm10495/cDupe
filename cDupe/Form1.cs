@@ -132,7 +132,6 @@ namespace cDupe
 
             //manual memory management
             graphics.Dispose();
-
         }
 
 
@@ -198,10 +197,13 @@ namespace cDupe
         /// </summary>
         private void scaleToDuplicationZoneRatio()
         {
-            //use ratio to compute height
-            double ratio = Convert.ToDouble(y_size) / Convert.ToDouble(x_size);
-            int new_height = Convert.ToInt16(Convert.ToDouble(this.Width) * ratio);
-            this.Height = new_height;
+            if (this.WindowState == FormWindowState.Normal)
+            {
+                //use ratio to compute height
+                double ratio = Convert.ToDouble(y_size) / Convert.ToDouble(x_size);
+                int new_height = Convert.ToInt16(Convert.ToDouble(this.Width) * ratio);
+                this.Height = new_height;
+            }
         }
 
 
@@ -274,7 +276,6 @@ namespace cDupe
             Properties.Settings.Default.Save();
 
             timer1.Interval = (1000) / Convert.ToInt16(ComboBoxRefreshRate.Text);
-
         }
 
 
@@ -316,7 +317,6 @@ namespace cDupe
                 x_loc = Properties.Settings.Default.x_loc;
                 y_loc = Properties.Settings.Default.y_loc;
             }
-
 
             //write state to settings
             Properties.Settings.Default.follow_mouse = ToolStripFollowMouse.Checked;
