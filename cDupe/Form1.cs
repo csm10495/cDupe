@@ -19,7 +19,7 @@ namespace cDupe
             InitializeComponent();
         }
 
-
+        #region Global Variables
         /// <summary>
         /// False: not currently mirroring
         /// True: currently mirroring
@@ -35,7 +35,6 @@ namespace cDupe
         /// height of duplication zone
         /// </summary>
         int y_size = 230;
-
 
         /// <summary>
         /// x based point location of duplication zone
@@ -56,6 +55,7 @@ namespace cDupe
         /// Graphics to be used to grab duplication zone
         /// </summary>
         Graphics graphics;
+        #endregion
 
         /// <summary>
         /// form loading method
@@ -67,6 +67,9 @@ namespace cDupe
         {
             //set resize toolstrip check to saved setting
             ToolStripResizeToScale.Checked = Properties.Settings.Default.resize_to_ratio;
+
+            //set follow mouse toolstrip check to saved setting
+            ToolStripFollowMouse.Checked = Properties.Settings.Default.follow_mouse;
 
             //get other settings
             x_size = Properties.Settings.Default.x_size;
@@ -89,6 +92,7 @@ namespace cDupe
                 scaleToDuplicationZoneRatio();
             }
         }
+
 
         /// <summary>
         /// called on every timer tick, to refresh the background image
@@ -124,6 +128,7 @@ namespace cDupe
 
         }
 
+
         /// <summary>
         /// called on every timer tick
         /// </summary>
@@ -134,6 +139,7 @@ namespace cDupe
             refreshImage();
         }
 
+
         /// <summary>
         /// exit menu item
         /// </summary>
@@ -143,6 +149,7 @@ namespace cDupe
         {
             Application.Exit();
         }
+
 
         /// <summary>
         /// begin or stop mirroring of duplication zone
@@ -177,6 +184,7 @@ namespace cDupe
             }
         }
 
+
         /// <summary>
         /// ensures that the form only reszes to proper ratios
         /// that respect the ratio of the duplication zone
@@ -200,6 +208,7 @@ namespace cDupe
             if (ToolStripResizeToScale.Checked == true)
                 scaleToDuplicationZoneRatio();
         }
+
 
         /// <summary>
         /// opens second form to setup duplication zone
@@ -285,6 +294,22 @@ namespace cDupe
 
 
         /// <summary>
+        /// checkbox to signify if the duplication zone should follow the mouse
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ToolStripFollowMouse_Click(object sender, EventArgs e)
+        {
+            //boolean flip
+            ToolStripFollowMouse.Checked = !ToolStripFollowMouse.Checked;
+
+            //write state to settings
+            Properties.Settings.Default.follow_mouse = ToolStripFollowMouse.Checked;
+            Properties.Settings.Default.Save();
+        }
+
+
+        /// <summary>
         /// About messagebox
         /// </summary>
         /// <param name="sender"></param>
@@ -293,5 +318,6 @@ namespace cDupe
         {
             MessageBox.Show("cDupe allows you to magnify a region of a screen. It was developed as a simple solution to enlarge the World of Tanks minimap onto a second monitor. Enjoy!", "MIT License - csm10495");
         }
+
     }
 }

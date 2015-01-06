@@ -33,16 +33,21 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripResizeToScale = new System.Windows.Forms.ToolStripMenuItem();
             this.resizeMirrorRegionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beginMirrorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripResizeToScale = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripFollowMouse = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshSpeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ComboBoxRefreshRate = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.ComboBoxRefreshRate = new System.Windows.Forms.ToolStripComboBox();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,25 +72,21 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ToolStripResizeToScale,
-            this.resizeMirrorRegionToolStripMenuItem,
             this.beginMirrorToolStripMenuItem,
             this.refreshSpeedToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.resizeMirrorRegionToolStripMenuItem,
+            this.toolStripSeparator3,
+            this.ToolStripResizeToScale,
+            this.ToolStripFollowMouse,
+            this.toolStripSeparator4,
             this.AboutToolStripMenuItem,
+            this.toolStripSeparator5,
             this.exitToolStripMenuItem1});
             this.fileToolStripMenuItem.Font = new System.Drawing.Font("Arial Black", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.fileToolStripMenuItem.Text = "File";
-            // 
-            // ToolStripResizeToScale
-            // 
-            this.ToolStripResizeToScale.Checked = true;
-            this.ToolStripResizeToScale.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ToolStripResizeToScale.Name = "ToolStripResizeToScale";
-            this.ToolStripResizeToScale.Size = new System.Drawing.Size(199, 22);
-            this.ToolStripResizeToScale.Text = "Resize to Scale";
-            this.ToolStripResizeToScale.Click += new System.EventHandler(this.ToolStripResizeToScale_Click);
             // 
             // resizeMirrorRegionToolStripMenuItem
             // 
@@ -101,6 +102,22 @@
             this.beginMirrorToolStripMenuItem.Text = "Start Mirror";
             this.beginMirrorToolStripMenuItem.Click += new System.EventHandler(this.beginMirrorToolStripMenuItem_Click);
             // 
+            // ToolStripResizeToScale
+            // 
+            this.ToolStripResizeToScale.Checked = true;
+            this.ToolStripResizeToScale.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ToolStripResizeToScale.Name = "ToolStripResizeToScale";
+            this.ToolStripResizeToScale.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripResizeToScale.Text = "Resize to Scale";
+            this.ToolStripResizeToScale.Click += new System.EventHandler(this.ToolStripResizeToScale_Click);
+            // 
+            // ToolStripFollowMouse
+            // 
+            this.ToolStripFollowMouse.Name = "ToolStripFollowMouse";
+            this.ToolStripFollowMouse.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripFollowMouse.Text = "Follow Mouse";
+            this.ToolStripFollowMouse.Click += new System.EventHandler(this.ToolStripFollowMouse_Click);
+            // 
             // refreshSpeedToolStripMenuItem
             // 
             this.refreshSpeedToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -110,6 +127,15 @@
             this.refreshSpeedToolStripMenuItem.Name = "refreshSpeedToolStripMenuItem";
             this.refreshSpeedToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.refreshSpeedToolStripMenuItem.Text = "Refresh Rate";
+            // 
+            // ComboBoxRefreshRate
+            // 
+            this.ComboBoxRefreshRate.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
+            this.ComboBoxRefreshRate.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.ComboBoxRefreshRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ComboBoxRefreshRate.Name = "ComboBoxRefreshRate";
+            this.ComboBoxRefreshRate.Size = new System.Drawing.Size(121, 23);
+            this.ComboBoxRefreshRate.SelectedIndexChanged += new System.EventHandler(this.ComboBoxRefreshRate_SelectedIndexChanged);
             // 
             // toolStripSeparator1
             // 
@@ -122,15 +148,6 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
             this.toolStripMenuItem1.Text = "Refresh per second";
-            // 
-            // ComboBoxRefreshRate
-            // 
-            this.ComboBoxRefreshRate.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
-            this.ComboBoxRefreshRate.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
-            this.ComboBoxRefreshRate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ComboBoxRefreshRate.Name = "ComboBoxRefreshRate";
-            this.ComboBoxRefreshRate.Size = new System.Drawing.Size(121, 23);
-            this.ComboBoxRefreshRate.SelectedIndexChanged += new System.EventHandler(this.ComboBoxRefreshRate_SelectedIndexChanged);
             // 
             // AboutToolStripMenuItem
             // 
@@ -153,6 +170,26 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(651, 493);
             this.panel1.TabIndex = 3;
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(196, 6);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(196, 6);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(196, 6);
             // 
             // Form1
             // 
@@ -188,6 +225,11 @@
         private System.Windows.Forms.ToolStripMenuItem ToolStripResizeToScale;
         private System.Windows.Forms.ToolStripMenuItem resizeMirrorRegionToolStripMenuItem;
         private System.Windows.Forms.ToolStripComboBox ComboBoxRefreshRate;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripFollowMouse;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
     }
 }
 

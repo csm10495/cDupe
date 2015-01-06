@@ -94,5 +94,17 @@ namespace cDupe.Properties {
                 this["refresh_rate"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool follow_mouse {
+            get {
+                return ((bool)(this["follow_mouse"]));
+            }
+            set {
+                this["follow_mouse"] = value;
+            }
+        }
     }
 }
