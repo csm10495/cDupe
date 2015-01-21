@@ -1,4 +1,8 @@
-﻿using System;
+﻿//This file is part of cDupe
+//cDupe - A way to enlarge a portion of the screen
+//(C) Charles Machalow (csm10495) under the MIT License
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -117,7 +121,7 @@ namespace cDupe
             try
             {
                 //creates image of duplication zone and sets it to be the background image
-                img = new Bitmap(x_size, y_size);
+                img = new Bitmap(x_size, y_size, PixelFormat.Format32bppRgb);    //This pixel format doesn't have odd white dots
                 graphics = Graphics.FromImage(img as Image);
                 graphics.CopyFromScreen(x_loc, y_loc, 0, 0, new Size(x_size, y_size));
                 this.BackgroundImage = (Image)img;
@@ -126,9 +130,6 @@ namespace cDupe
             {
                 MessageBox.Show(ex.ToString()); ;
             }
-
-            //force background to stay stretched
-            this.BackgroundImageLayout = ImageLayout.Stretch;
 
             //manual memory management
             graphics.Dispose();
@@ -331,7 +332,7 @@ namespace cDupe
         /// <param name="e"></param>
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("cDupe allows you to magnify a region of a screen. It was developed as a simple solution to enlarge the World of Tanks minimap onto a second monitor. Enjoy!", "MIT License - csm10495");
+            MessageBox.Show("cDupe allows you to magnify a region of a screen. It was developed as a simple solution to enlarge the World of Tanks minimap onto a second monitor. Enjoy!", "Version 1.1 - MIT License - csm10495");
         }
 
     }

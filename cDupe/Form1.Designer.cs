@@ -33,21 +33,21 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.resizeMirrorRegionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.beginMirrorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripResizeToScale = new System.Windows.Forms.ToolStripMenuItem();
-            this.ToolStripFollowMouse = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshSpeedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ComboBoxRefreshRate = new System.Windows.Forms.ToolStripComboBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.resizeMirrorRegionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.ToolStripResizeToScale = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripFollowMouse = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.AboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,35 +88,12 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // resizeMirrorRegionToolStripMenuItem
-            // 
-            this.resizeMirrorRegionToolStripMenuItem.Name = "resizeMirrorRegionToolStripMenuItem";
-            this.resizeMirrorRegionToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.resizeMirrorRegionToolStripMenuItem.Text = "Resize Mirror Region";
-            this.resizeMirrorRegionToolStripMenuItem.Click += new System.EventHandler(this.resizeMirrorRegionToolStripMenuItem_Click);
-            // 
             // beginMirrorToolStripMenuItem
             // 
             this.beginMirrorToolStripMenuItem.Name = "beginMirrorToolStripMenuItem";
             this.beginMirrorToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.beginMirrorToolStripMenuItem.Text = "Start Mirror";
             this.beginMirrorToolStripMenuItem.Click += new System.EventHandler(this.beginMirrorToolStripMenuItem_Click);
-            // 
-            // ToolStripResizeToScale
-            // 
-            this.ToolStripResizeToScale.Checked = true;
-            this.ToolStripResizeToScale.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ToolStripResizeToScale.Name = "ToolStripResizeToScale";
-            this.ToolStripResizeToScale.Size = new System.Drawing.Size(199, 22);
-            this.ToolStripResizeToScale.Text = "Resize to Scale";
-            this.ToolStripResizeToScale.Click += new System.EventHandler(this.ToolStripResizeToScale_Click);
-            // 
-            // ToolStripFollowMouse
-            // 
-            this.ToolStripFollowMouse.Name = "ToolStripFollowMouse";
-            this.ToolStripFollowMouse.Size = new System.Drawing.Size(199, 22);
-            this.ToolStripFollowMouse.Text = "Follow Mouse";
-            this.ToolStripFollowMouse.Click += new System.EventHandler(this.ToolStripFollowMouse_Click);
             // 
             // refreshSpeedToolStripMenuItem
             // 
@@ -149,12 +126,55 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(189, 22);
             this.toolStripMenuItem1.Text = "Refresh per second";
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
+            // 
+            // resizeMirrorRegionToolStripMenuItem
+            // 
+            this.resizeMirrorRegionToolStripMenuItem.Name = "resizeMirrorRegionToolStripMenuItem";
+            this.resizeMirrorRegionToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.resizeMirrorRegionToolStripMenuItem.Text = "Resize Mirror Region";
+            this.resizeMirrorRegionToolStripMenuItem.Click += new System.EventHandler(this.resizeMirrorRegionToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(196, 6);
+            // 
+            // ToolStripResizeToScale
+            // 
+            this.ToolStripResizeToScale.Checked = true;
+            this.ToolStripResizeToScale.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ToolStripResizeToScale.Name = "ToolStripResizeToScale";
+            this.ToolStripResizeToScale.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripResizeToScale.Text = "Resize to Scale";
+            this.ToolStripResizeToScale.Click += new System.EventHandler(this.ToolStripResizeToScale_Click);
+            // 
+            // ToolStripFollowMouse
+            // 
+            this.ToolStripFollowMouse.Name = "ToolStripFollowMouse";
+            this.ToolStripFollowMouse.Size = new System.Drawing.Size(199, 22);
+            this.ToolStripFollowMouse.Text = "Follow Mouse";
+            this.ToolStripFollowMouse.Click += new System.EventHandler(this.ToolStripFollowMouse_Click);
+            // 
+            // toolStripSeparator4
+            // 
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(196, 6);
+            // 
             // AboutToolStripMenuItem
             // 
             this.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem";
             this.AboutToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
             this.AboutToolStripMenuItem.Text = "About";
             this.AboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(196, 6);
             // 
             // exitToolStripMenuItem1
             // 
@@ -171,33 +191,15 @@
             this.panel1.Size = new System.Drawing.Size(651, 493);
             this.panel1.TabIndex = 3;
             // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(196, 6);
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(196, 6);
-            // 
-            // toolStripSeparator4
-            // 
-            this.toolStripSeparator4.Name = "toolStripSeparator4";
-            this.toolStripSeparator4.Size = new System.Drawing.Size(196, 6);
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(196, 6);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(651, 517);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
