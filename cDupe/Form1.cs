@@ -332,7 +332,7 @@ namespace cDupe
         /// <param name="e"></param>
         private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("cDupe allows you to magnify a region of a screen. It was developed as a simple solution to enlarge the World of Tanks minimap onto a second monitor. Enjoy!", "Version 1.1 - MIT License - csm10495");
+            MessageBox.Show("cDupe allows you to magnify a region of a screen. It was developed as a simple solution to enlarge the World of Tanks minimap onto a second monitor. Enjoy!", "Version 1.2 - MIT License - csm10495");
         }
 
     }
