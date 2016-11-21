@@ -48,6 +48,7 @@
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.topMostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -79,6 +80,7 @@
             this.toolStripSeparator3,
             this.ToolStripResizeToScale,
             this.ToolStripFollowMouse,
+            this.topMostToolStripMenuItem,
             this.toolStripSeparator4,
             this.AboutToolStripMenuItem,
             this.toolStripSeparator5,
@@ -191,6 +193,13 @@
             this.panel1.Size = new System.Drawing.Size(651, 493);
             this.panel1.TabIndex = 3;
             // 
+            // topMostToolStripMenuItem
+            // 
+            this.topMostToolStripMenuItem.Name = "topMostToolStripMenuItem";
+            this.topMostToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
+            this.topMostToolStripMenuItem.Text = "TopMost";
+            this.topMostToolStripMenuItem.Click += new System.EventHandler(this.topMostToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +241,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator5;
+        private System.Windows.Forms.ToolStripMenuItem topMostToolStripMenuItem;
     }
 }
 

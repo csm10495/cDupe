@@ -80,6 +80,8 @@ namespace cDupe
             y_size = Properties.Settings.Default.y_size;
             x_loc = Properties.Settings.Default.x_loc;
             y_loc = Properties.Settings.Default.y_loc;
+            this.TopMost = Properties.Settings.Default.topMost;
+            topMostToolStripMenuItem.Checked = this.TopMost;
 
             //set combobox values to be from 1 to 120
             ComboBoxRefreshRate.Items.Clear();
@@ -335,5 +337,19 @@ namespace cDupe
             MessageBox.Show("cDupe allows you to magnify a region of a screen. It was developed as a simple solution to enlarge the World of Tanks minimap onto a second monitor. Enjoy!", "Version 1.2 - MIT License - csm10495");
         }
 
+        /// <summary>
+        /// A toggle for if this form should be topmost or not
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void topMostToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.TopMost = !this.TopMost;
+            topMostToolStripMenuItem.Checked = this.TopMost;
+
+            //write state to settings
+            Properties.Settings.Default.topMost = this.TopMost;
+            Properties.Settings.Default.Save();
+        }
     }
 }
